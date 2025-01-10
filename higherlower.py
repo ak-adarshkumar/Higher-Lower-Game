@@ -5,14 +5,14 @@ import random
 def details(info):
     return f"{info['name']}, A {info['description']}, From {info['country']}"
 SCORE = 0
-B = game_data.data[random.randint(0,len(game_data.data)-1)]
+B = random.choice(game_data.data)
 
 winning = True
 while winning:
     A = B
-    B = game_data.data[random.randint(0,len(game_data.data)-1)]
+    B = random.choice(game_data.data)
     if B == A:
-        B = game_data.data[random.randint(1, len(game_data.data))]
+        B = random.choice(game_data.data)
 
     print(art.logo)
     print(f"Compare A : {details(A)}")
